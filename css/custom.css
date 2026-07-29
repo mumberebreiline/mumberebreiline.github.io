@@ -1,34 +1,50 @@
-/*************************************************************************
- * Your custom CSS file
- *************************************************************************/
+/* Quick Deliveries — custom branding overrides.
+   The template's README explicitly asks not to edit frame.css,
+   controls.css, or widgets.css directly — everything project-specific
+   goes here instead, so future template updates don't get overwritten
+   by your own changes.
 
-.custom-dropdown {
-  width: 240px;
+   Colors match the Flutter app itself: deep purple (admin), teal
+   (delivery guy), orange (accents/buttons) — so the website and the
+   app feel like the same product.
+
+   Some of these selectors depend on exact class names inside
+   css/frame.css, which can vary slightly between template versions —
+   if a color below doesn't visibly change anything, open frame.css,
+   search for that same class name, and adjust the selector here to
+   match what's actually there.
+*/
+
+:root {
+  --qd-purple: #4B2E83;
+  --qd-teal: #00796B;
+  --qd-orange: #EF6C00;
 }
 
-.custom-textbox {
-  width: 240px;
+/* Top navigation bar */
+.menu {
+  background-color: var(--qd-purple) !important;
 }
 
-#dialog-1,
-#dialog-2,
-#dialog-3,
-#dialog-4,
-#share-dialog {
-  display: none;
+/* Links throughout the page body */
+.content a,
+.banner a {
+  color: var(--qd-teal);
 }
 
-#share-url {
-  width: 100%;
-  -webkit-touch-callout: default !important;
-  -webkit-user-select: text !important;
-  -khtml-user-select: text !important;
-  -moz-user-select: text !important;
-  -ms-user-select: text !important;
-  user-select: text !important;
+/* Feature/team highlight text */
+.highlight-text {
+  color: var(--qd-orange);
+  font-weight: 700;
 }
 
-#share-url-copy-prompt {
-  display: none;
-  color: #007bff;
+/* Section headings */
+.content h2 {
+  color: var(--qd-purple);
+}
+
+/* Any custom-button elements, if used elsewhere on the site */
+.custom-button-primary {
+  background-color: var(--qd-orange) !important;
+  border-color: var(--qd-orange) !important;
 }
